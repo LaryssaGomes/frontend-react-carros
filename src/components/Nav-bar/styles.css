@@ -1,0 +1,19 @@
+.nav ul {
+    display:flex;
+    font-size: 1.5rem;
+}
+
+.nav ul li {
+    margin: 20px 0 20px 20px;
+    border-right: 4px solid #000;
+}
+
+a {
+    color: #fff;
+}
+
+.imgHome {
+    height: 600px;
+    width: 70%;
+    object-fit: cover;
+}

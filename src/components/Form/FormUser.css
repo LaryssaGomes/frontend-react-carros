@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+* {
+    background-color: #333;
+}
+.container-register-user{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.form-control{
+    background-color: #fff;
+    width: 400px;
+    display: flex;
+}
+input{
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+input:focus{
+    outline: 0;
+}
+.toggle{
+    position: relative;
+}
+#toggle {
+    position: absolute;
+    background: transparent;
+    color: #333;
+    top: 50%;
+    right: 20px;
+    transform: translateY(50%);
+    cursor: pointer;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+.btn button {
+    background-color: #E5E5E5;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .form-control{
+        width: 300px;
+    }
+    .container-register-user h1{
+        text-align: center;
+    }
+}
+
