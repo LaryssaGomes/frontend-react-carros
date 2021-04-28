@@ -12,6 +12,7 @@ export default class FormUser extends React.Component {
                   <li><a href="/">Home</a></li>
                   <li><a href="/login">Login</a></li>
                   <li><a href="/registry">Register</a></li>
+                  <li><a href="/contato">Contato</a></li>
               </ul>
         </nav>
         

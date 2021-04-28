@@ -17,7 +17,12 @@ export default class UserService{
         const config = {
             'Content-Type': 'multipart/form-data',
         }
-        api.post('/api/users/', users, config)
+        api.post('/api/users/', users, 
+        {headers:{
+            'Content-Type': 'multipart/form-data'
+                }
+        }
+        )
     }
 
     loginUser(users){
