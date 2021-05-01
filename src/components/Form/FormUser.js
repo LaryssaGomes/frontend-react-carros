@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../Global.css';
 import  UserService from '../../Service/UserService';
 import './FormUser.css';
 const userService = new UserService();
@@ -13,28 +13,21 @@ export default class FormUser extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleCreate(){
-    userService.createUser(
-      {
-        "first_name": this.state.firstName,
-        "username": this.state.email,
-        "img": this.state.file,
-        "email": this.state.email,
-        "password": this.state.password
-    }
-    ).then((result)=>{
-      alert("Customer created!");
-    }).catch(()=>{
-      alert('Error');
-    });
-  }
 
 
-  handleSubmit(event) {
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(this.state);
    
-    console.log(event)
-    this.handleCreate();
-   
+      let form_data = new FormData();
+      form_data.append('img', this.state.file, this.state.file.name);
+      form_data.append('email', this.state.email);
+      form_data.append('first_name', this.state.firstName);
+      form_data.append('password', this.state.password);
+      form_data.append('username', this.state.email);
+      userService.createUser(
+        form_data
+      )
   }
 
   handleChange(event) {
